@@ -14,11 +14,11 @@ import ru.t1consulting.test_task.service.CounterService;
 public class CounterController {
 
     private final CounterService counterService;
+
     @Autowired
     public CounterController(CounterService counterService) {
         this.counterService = counterService;
     }
-
 
     /**
      * Method for processing requests, validation and sending to Service
