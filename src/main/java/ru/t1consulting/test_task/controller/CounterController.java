@@ -36,7 +36,8 @@ public class CounterController {
             )
     })
     @GetMapping("count")
-    public ResponseEntity<String> getStringCounting(@Parameter(description = "A string for counting symbols", example = "aaabbc") @RequestParam String stringToCount) {
+    public ResponseEntity<String> getStringCounting(@Parameter(description = "A string for counting symbols", example = "aaabbc")
+                                                        @RequestParam String stringToCount) {
         if (stringToCount == null || stringToCount.isBlank()) {
             return ResponseEntity.badRequest().build();
         }
